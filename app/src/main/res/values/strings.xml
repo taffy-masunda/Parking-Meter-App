@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ParkingMachineApp</string>
+    <string name="amounts_breakdown">AMOUNTS BREAKDOWN</string>
+    <string name="calculate_change">Calculate Change</string>
+    <string name="amount_placeholder">0.00</string>
+    <string name="parking_meter_machine">Parking Meter Machine</string>
+</resources>

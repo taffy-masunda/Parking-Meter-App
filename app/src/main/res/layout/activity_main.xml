@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/heading_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parking_meter_machine"
+        android:textSize="30sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--  might have random numbers of amount to be paid to show different calculations -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/owed_amount_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_placeholder"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/heading_textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cash_amount_input_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/amount_placeholder"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/owed_amount_edittext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/calculate_change_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_change"
+        android:layout_marginTop="32dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cash_amount_input_edittext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/change_output_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/amounts_breakdown"
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toBottomOf="@id/calculate_change_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/change_output_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Some info goes here"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/change_output_heading"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
